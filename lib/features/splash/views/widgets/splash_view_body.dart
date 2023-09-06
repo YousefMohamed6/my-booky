@@ -35,7 +35,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        Image.asset(kSplashLogo),
+        Image.asset(kAppLogo),
         const CustomSizedBox(height: 8),
         SliderText(slidingAnimation: slidingAnimation),
       ],
