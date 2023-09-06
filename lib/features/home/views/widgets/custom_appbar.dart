@@ -18,7 +18,7 @@ class CustomAppBar extends StatelessWidget {
           children: [
             Image.asset(
               kAppLogo,
-              height: 16,
+              height: 20,
             ),
             CustomIconButton(
               icon: const Icon(Icons.search),
@@ -31,3 +31,5 @@ class CustomAppBar extends StatelessWidget {
     );
   }
 }
+
+
