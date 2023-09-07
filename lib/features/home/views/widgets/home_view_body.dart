@@ -1,4 +1,5 @@
 import 'package:bookly/core/widgets/custom_text.dart';
+import 'package:bookly/features/home/views/widgets/best_seller_listview.dart';
 import 'package:bookly/features/home/views/widgets/custom_appbar.dart';
 import 'package:bookly/features/home/views/widgets/custom_list_view.dart';
 import 'package:flutter/material.dart';
@@ -14,12 +15,13 @@ class HomeViewBody extends StatelessWidget {
         CustomAppBar(),
         CustomListView(),
         Padding(
-          padding: EdgeInsets.only(left: 16.0),
+          padding: EdgeInsets.only(left: 16.0, bottom: 24),
           child: CustomText(
             text: 'Best Seller',
             fontWeight: FontWeight.w600,
           ),
         ),
+        BestSellerListView(),
       ],
     );
   }
