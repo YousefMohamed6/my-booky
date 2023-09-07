@@ -1,9 +1,8 @@
-import 'package:bookly/constants.dart';
 import 'package:bookly/core/widgets/custom_icon_button.dart';
 import 'package:flutter/material.dart';
 
-class CustomAppBar extends StatelessWidget {
-  const CustomAppBar({
+class BookAppBar extends StatelessWidget {
+  const BookAppBar({
     super.key,
   });
 
@@ -16,12 +15,15 @@ class CustomAppBar extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Image.asset(
-              kAppLogo,
-              height: 20,
+            CustomIconButton(
+              icon: const Icon(Icons.close),
+              iconSize: 32,
+              onPressed: () {
+                Navigator.pop(context);
+              },
             ),
             CustomIconButton(
-              icon: const Icon(Icons.search),
+              icon: const Icon(Icons.shopping_basket),
               iconSize: 32,
               onPressed: () {},
             ),
