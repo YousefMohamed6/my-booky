@@ -50,10 +50,10 @@ class BestSellerItem extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                const CustomText(
+                CustomText(
                   text: 'Harry Potter ',
                   fontSize: 18,
-                  color: Colors.grey,
+                  color: Colors.white.withOpacity(0.5),
                 ),
                 const Row(
                   children: [

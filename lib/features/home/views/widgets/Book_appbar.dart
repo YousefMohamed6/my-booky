@@ -11,7 +11,7 @@ class BookAppBar extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(top: 8, right: 16, left: 16),
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 24),
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
