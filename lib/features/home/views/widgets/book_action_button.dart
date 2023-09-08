@@ -2,8 +2,8 @@ import 'package:bookly/core/widgets/custom_text.dart';
 import 'package:bookly/core/widgets/vertical_sizebox.dart';
 import 'package:flutter/material.dart';
 
-class CustomBookButtom extends StatelessWidget {
-  const CustomBookButtom({super.key});
+class BookAcionButtom extends StatelessWidget {
+  const BookAcionButtom({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +22,7 @@ class CustomBookButtom extends StatelessWidget {
           color: Colors.white,
           onPressed: () {},
           child: const CustomText(
-            text: '19.19',
+            text: r'19.19 $',
             color: Colors.black,
             fontWeight: FontWeight.bold,
           ),

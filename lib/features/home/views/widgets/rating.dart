@@ -2,8 +2,8 @@ import 'package:bookly/core/widgets/custom_text.dart';
 import 'package:bookly/core/widgets/vertical_sizebox.dart';
 import 'package:flutter/material.dart';
 
-class Rating extends StatelessWidget {
-  const Rating({super.key});
+class BookRating extends StatelessWidget {
+  const BookRating({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -63,7 +63,7 @@ class BestSellerItem extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                     ),
                     Spacer(),
-                    Rating(),
+                    BookRating(),
                   ],
                 )
               ],

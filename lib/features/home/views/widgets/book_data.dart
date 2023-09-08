@@ -22,7 +22,7 @@ class BookData extends StatelessWidget {
           color: Colors.white.withOpacity(0.5),
         ),
         const CustomSizedBox(height: 4),
-        const Rating(),
+        const BookRating(),
       ],
     );
   }

@@ -10,7 +10,7 @@ class CustomBookItem extends StatelessWidget {
     return CustomSizedBox(
       height: MediaQuery.of(context).size.height * 0.3,
       child: AspectRatio(
-        aspectRatio: 2.7 / 4,
+        aspectRatio: 2.5 / 4,
         child: Container(
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(16),
