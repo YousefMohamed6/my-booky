@@ -23,7 +23,7 @@ class BookAppBar extends StatelessWidget {
               },
             ),
             CustomIconButton(
-              icon: const Icon(Icons.shopping_basket),
+              icon: const Icon(Icons.shopping_cart_outlined),
               iconSize: 32,
               onPressed: () {},
             ),

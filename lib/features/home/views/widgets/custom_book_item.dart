@@ -2,8 +2,8 @@ import 'package:bookly/constants.dart';
 import 'package:bookly/core/widgets/vertical_sizebox.dart';
 import 'package:flutter/material.dart';
 
-class CustomListViewItem extends StatelessWidget {
-  const CustomListViewItem({super.key});
+class CustomBookItem extends StatelessWidget {
+  const CustomBookItem({super.key});
 
   @override
   Widget build(BuildContext context) {
