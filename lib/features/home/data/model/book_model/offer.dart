@@ -1,0 +1,40 @@
+import 'list_price.dart';
+import 'retail_price.dart';
+
+class Offer {
+  int? finskyOfferType;
+  ListPrice? listPrice;
+  RetailPrice? retailPrice;
+  bool? giftable;
+
+  Offer({
+    this.finskyOfferType,
+    this.listPrice,
+    this.retailPrice,
+    this.giftable,
+  });
+
+  @override
+  String toString() {
+    return 'Offer(finskyOfferType: $finskyOfferType, listPrice: $listPrice, retailPrice: $retailPrice, giftable: $giftable)';
+  }
+
+  factory Offer.fromJsonDate(Map<String, dynamic> json) => Offer(
+        finskyOfferType: json['finskyOfferType'] as int?,
+        listPrice: json['listPrice'] == null
+            ? null
+            : ListPrice.fromJsonDate(json['listPrice'] as Map<String, dynamic>),
+        retailPrice: json['retailPrice'] == null
+            ? null
+            : RetailPrice.fromJsonDate(
+                json['retailPrice'] as Map<String, dynamic>),
+        giftable: json['giftable'] as bool?,
+      );
+
+  Map<String, dynamic> toJsonDate() => {
+        'finskyOfferType': finskyOfferType,
+        'listPrice': listPrice?.toJsonDate(),
+        'retailPrice': retailPrice?.toJsonDate(),
+        'giftable': giftable,
+      };
+}

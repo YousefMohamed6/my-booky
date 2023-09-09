@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-
 class Avatar extends StatelessWidget {
-  const Avatar({super.key,required this.image, this.radius, this.backgroundColor});
+  const Avatar(
+      {super.key, required this.image, this.radius, this.backgroundColor});
   final String image;
   final double? radius;
   final Color? backgroundColor;

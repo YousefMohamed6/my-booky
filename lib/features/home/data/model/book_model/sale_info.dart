@@ -1,0 +1,55 @@
+import 'list_price.dart';
+import 'offer.dart';
+import 'retail_price.dart';
+
+class SaleInfo {
+  String? country;
+  String? saleability;
+  bool? isEbook;
+  ListPrice? listPrice;
+  RetailPrice? retailPrice;
+  String? buyLink;
+  List<Offer>? offers;
+
+  SaleInfo({
+    this.country,
+    this.saleability,
+    this.isEbook,
+    this.listPrice,
+    this.retailPrice,
+    this.buyLink,
+    this.offers,
+  });
+
+  @override
+  String toString() {
+    return 'SaleInfo(country: $country, saleability: $saleability, isEbook: $isEbook, listPrice: $listPrice, retailPrice: $retailPrice, buyLink: $buyLink, offers: $offers)';
+  }
+
+  factory SaleInfo.fromJsonData(Map<String, dynamic> json) => SaleInfo(
+        country: json['country'] as String?,
+        saleability: json['saleability'] as String?,
+        isEbook: json['isEbook'] as bool?,
+        listPrice: json['listPrice'] == null
+            ? null
+            : ListPrice.fromJsonDate(json['listPrice'] as Map<String, dynamic>),
+        retailPrice: json['retailPrice'] == null
+            ? null
+            : RetailPrice.fromJsonDate(
+                json['retailPrice'] as Map<String, dynamic>),
+        buyLink: json['buyLink'] as String?,
+        offers: (json['offers'] as List<dynamic>?)
+            ?.map((e) => Offer.fromJsonDate(e as Map<String, dynamic>))
+            .toList(),
+      );
+
+  Map<String, dynamic> toJsonDate() => {
+        'country': country,
+        'saleability': saleability,
+        'isEbook': isEbook,
+        'listPrice': listPrice?.toJsonDate(),
+        'retailPrice': retailPrice?.toJsonDate(),
+        'buyLink': buyLink,
+        'offers': offers?.map((e) => e.toJsonDate()).toList(),
+      };
+}

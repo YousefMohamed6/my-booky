@@ -8,7 +8,8 @@ class CustomText extends StatelessWidget {
       this.fontWeight,
       this.fontFamily,
       this.color,
-      this.textAlign, this.decoration});
+      this.textAlign,
+      this.decoration});
   final String text;
   final double? fontSize;
   final FontWeight? fontWeight;
